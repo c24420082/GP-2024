@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://nyclktl8pcr0"]
+
+[ext_resource type="Texture2D" uid="uid://dnku55dcgmtb2" path="res://icon.svg" id="1_gu30c"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="2_rsi04"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(2364, 876)
+rotation = 0.441568
+scale = Vector2(10, 5.684)
+skew = -0.808087
+texture = ExtResource("1_gu30c")
+offset = Vector2(-0.825, 3.035)
+script = ExtResource("2_rsi04")
+speed = null
+rot_speed = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.34152
+script = ExtResource("2_rsi04")
+speed = null
+rot_speed = null
