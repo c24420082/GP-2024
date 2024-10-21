@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://biii1a4khu3dv"]
+[gd_scene load_steps=5 format=3 uid="uid://biii1a4khu3dv"]
 
 [ext_resource type="PackedScene" uid="uid://cn6tkn3loy4th" path="res://player.tscn" id="1_unoke"]
+[ext_resource type="Texture2D" uid="uid://c844yfbd26ea8" path="res://sprites/bug.png" id="2_gh57y"]
+[ext_resource type="Script" path="res://enemy.gd" id="3_najcb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d0y8p"]
 
@@ -16,5 +18,12 @@ position = Vector2(518, 523)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_d0y8p")
+
+[node name="Enemy" type="Sprite2D" parent="." node_paths=PackedStringArray("player")]
+position = Vector2(-192, 531)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_gh57y")
+script = ExtResource("3_najcb")
+player = NodePath("../player")
 
 [editable path="player"]
