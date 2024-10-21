@@ -52,4 +52,8 @@ fire={
 
 [physics]
 
+<<<<<<< HEAD
 2d/default_gravity=-980.0
+=======
+2d/default_gravity=0.0
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
