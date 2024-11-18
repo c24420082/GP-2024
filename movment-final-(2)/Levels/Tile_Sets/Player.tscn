@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2n37vq0ug7a3"]
+
+[ext_resource type="Script" path="res://Levels/Tile_Sets/player.gd" id="1_x0glm"]
+[ext_resource type="SpriteFrames" uid="uid://ce67pjiskx4be" path="res://Levels/Tile_Sets/Player_Animation.tres" id="1_yk2c5"]
+[ext_resource type="Resource" uid="uid://hp5odb0rqrkb" path="res://Levels/Tile_Sets/Player_Action.tres" id="2_8l1aq"]
+[ext_resource type="Script" path="res://Levels/Tile_Sets/facing.gd" id="3_ovcd5"]
+[ext_resource type="Script" path="res://Levels/Tile_Sets/player_input2.gd" id="5_32srd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_absq4"]
+radius = 7.07107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a77ih"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_x0glm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_absq4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4.485, 4.485)
+
+[node name="Facing" type="Node2D" parent="." node_paths=PackedStringArray("character")]
+scale = Vector2(-1, 1)
+script = ExtResource("3_ovcd5")
+character = NodePath("..")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Facing"]
+position = Vector2(-1, 4)
+scale = Vector2(0.626915, 0.582171)
+sprite_frames = ExtResource("1_yk2c5")
+animation = &"Death_animaiton"
+autoplay = "Idle_animation"
+frame_progress = 0.448536
+
+[node name="PlayerInput" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("5_32srd")
+player = NodePath("..")
+actions = ExtResource("2_8l1aq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_a77ih")

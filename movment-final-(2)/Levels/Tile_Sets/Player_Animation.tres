@@ -1,0 +1,82 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://ce67pjiskx4be"]
+
+[ext_resource type="Texture2D" uid="uid://cx4lj737e2bti" path="res://sprites/sprtiesheet.png" id="2_lls2w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0chcx"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(96, 0, 21, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpv1t"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(117, 0, 21, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7e2q"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(135, 0, 45, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crub1"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(57, 0, 20, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_was8q"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(77, 0, 20, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdrje"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(0, 0, 18, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy758"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(18, 0, 18, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_017c7"]
+atlas = ExtResource("2_lls2w")
+region = Rect2(36, 0, 18, 37)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Crouch_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0chcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpv1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7e2q")
+}],
+"loop": true,
+"name": &"Death_animaiton",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crub1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_was8q")
+}],
+"loop": true,
+"name": &"Idle_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdrje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy758")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_017c7")
+}],
+"loop": true,
+"name": &"Run_animation",
+"speed": 5.0
+}]

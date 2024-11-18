@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerInputActions" load_steps=2 format=3 uid="uid://hp5odb0rqrkb"]
+
+[ext_resource type="Script" path="res://player_input.gd" id="1_lmtch"]
+
+[resource]
+script = ExtResource("1_lmtch")
+left = &"left"
+right = &"right"
+up = &"up"
+down = &"down"
